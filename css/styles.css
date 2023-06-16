@@ -184,7 +184,7 @@ address {
 
 ol,
 ul {
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 ol,
@@ -604,7 +604,6 @@ progress {
 
 .img-fluid {
   max-width: 100%;
-  height: 500px;
 }
 
 .img-thumbnail {

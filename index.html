@@ -29,7 +29,47 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/snow.css" rel="stylesheet"/>
         <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
-        
+        <style>
+            .swiper-containerF {position:fixed;width:100%;height:100%;visibility: hidden; display:block;background-color:#fff;z-index:102;}
+            .swiper-slideF {width: 100%;height: 100%;background: #000;}
+            #fullsizeG.swiper-container-horizontal>.swiper-pagination-bullets, #fullsizeG.swiper-pagination-custom, #fullsizeG.swiper-pagination-fraction .swiper-paginationF
+            {position:fixed;bottom: 50px;text-align: center;}
+        </style>
+        <div id="fullsizeG" class="swiper-containerF swiper-container-initialized swiper-container-horizontal">
+            <div class="swiper-wrapper" id="swiper-wrapper-019bd507cfa0af08" aria-live="polite" style="transform: translate3d(-338px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="11" role="group" aria-label="1 / 14" style="width: 338px;"><img src="assets/img/09.jpg" style="width:100%;"></div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="2 / 14" style="width: 338px;"><img src="assets/img/02.jpg" style="width:100%;"></div>
+                        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="3 / 14" style="width: 338px;"><img src="assets/img/04.jpg" style="width:100%;"></div>
+                        <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="4 / 14" style="width: 338px;"><img src="assets/img/05.jpg" style="width:100%;"></div>
+                        <div class="swiper-slide" data-swiper-slide-index="3" role="group" aria-label="5 / 14" style="width: 338px;"><img src="assets/img/06.jpg" style="width:100%;"></div>
+                        <div class="swiper-slide" data-swiper-slide-index="4" role="group" aria-label="6 / 14" style="width: 338px;"><img src="assets/img/07.jpg" style="width:100%;"></div>
+                        <div class="swiper-slide" data-swiper-slide-index="5" role="group" aria-label="7 / 14" style="width: 338px;"><img src="assets/img/08.jpg" style="width:100%;"></div>
+                        <div class="swiper-slide" data-swiper-slide-index="6" role="group" aria-label="8 / 14" style="width: 338px;"><img src="assets/img/11.jpg" style="width:100%;"></div>
+                        <div class="swiper-slide" data-swiper-slide-index="7" role="group" aria-label="9 / 14" style="width: 338px;"><img src="assets/img/12.jpg" style="width:100%;"></div>
+                        <div class="swiper-slide" data-swiper-slide-index="8" role="group" aria-label="10 / 14" style="width: 338px;"><img src="assets/img/13.jpg" style="width:100%;"></div>
+                        <div class="swiper-slide" data-swiper-slide-index="9" role="group" aria-label="11 / 14" style="width: 338px;"><img src="assets/img/14.jpg" style="width:100%;"></div>
+                        <div class="swiper-slide" data-swiper-slide-index="10" role="group" aria-label="12 / 14" style="width: 338px;"><img src="assets/img/21.jpg" style="width:100%;"></div>
+                        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="11" role="group" aria-label="13 / 14" style="width: 338px;"><img src="assets/img/09.jpg" style="width:100%;"></div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="14 / 14" style="width: 338px;"><img src="assets/img/09.jpg" style="width:100%;"></div></div>
+                <div class="swiper-paginationF swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <div onclick="fullsizeGclose()" id="fullsizeGBT" style="position: fixed; top: 3vw; right: 3vw; background-image: url(&quot;assets/img/rs-default.png&quot;); background-position: -32px 0px; width: 32px; height: 32px; background-color: rgb(0, 0, 0); border-radius: 2px; margin: 6px; z-index: 103; display: block;"></div>
+        <script>
+            function fullsizeGclose() {
+                document.getElementById("fullsizeG").style.visibility = "hidden"
+                document.getElementById("fullsizeGBT").style.display = "none"
+            }
+                var swiper = new Swiper('.swiper-containerF', {
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: '1',
+                    loop: true,
+                    pagination: {
+                    el: '.swiper-paginationF',
+                    type: 'bullets',
+                    },
+                });
+        </script>
     </head>
     <body id="page-top">
         <div class="pageCover" style="position:relative;">
@@ -78,6 +118,7 @@
                   </div>
               </div>
           </section>
+
           <!-- first-->
           <section class="content-section" id="first">
               <div class="container px-4 px-lg-5 text-center">
@@ -104,8 +145,10 @@
           <!-- Services-->
           <section class="content-section bg-light text-center" id="services">
             <h2 class="mb-6" >✨예쁨주의✨</h2>
-              <div class="_galleryBox aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                
+            <!-- 시작 -->
+
+                <div class="_galleryBox aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                <div style="position:absolute;top:35vw;right:3vw;background-image:url(assets/img/rs-default.png);width: 32px;height: 32px;background-color: #000;border-radius: 2px;margin: 6px;z-index:101;" onclick="fullsizeG()"></div>
                 <div class="swiper-container swiper-container-coverflow swiper-container-3d swiper-container-initialized swiper-container-horizontal">
                     <div class="swiper-wrapper" id="swiper-wrapper-621c4d08dbdce959" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(-5115px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="10" role="group" aria-label="1 / 16" style="width: 372px; transition-duration: 0ms; transform: translate3d(0px, 0px, -2800px) rotateX(0deg) rotateY(280deg) scale(1); z-index: -13;"><img src="assets/img/09.jpg" style="width:100%;height:100%;object-fit: contain;"></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="11" role="group" aria-label="2 / 16" style="width: 372px; transition-duration: 0ms; transform: translate3d(0px, 0px, -2600px) rotateX(0deg) rotateY(260deg) scale(1); z-index: -12;"><img src="/data/1680311702224/crop_A_230611_115930_41923900y3Jhp5.jpg" style="width:100%;height:100%;object-fit: contain;"></div>
                             <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="3 / 16" style="width: 372px; transition-duration: 0ms; transform: translate3d(0px, 0px, -2400px) rotateX(0deg) rotateY(240deg) scale(1); z-index: -11;"><img src="assets/img/02.jpg" style="width:100%;height:100%;object-fit: contain;"></div><!-- 2021-10-18 추가 조-->
@@ -118,6 +161,7 @@
                             <div class="swiper-slide" data-swiper-slide-index="7" role="group" aria-label="10 / 16" style="width: 372px; transition-duration: 0ms; transform: translate3d(0px, 0px, -1000px) rotateX(0deg) rotateY(100deg) scale(1); z-index: -4;"><img src="assets/img/12.jpg" style="width:100%;height:100%;object-fit: contain;"></div><!-- 2021-10-18 추가 조-->
                             <div class="swiper-slide" data-swiper-slide-index="8" role="group" aria-label="11 / 16" style="width: 372px; transition-duration: 0ms; transform: translate3d(0px, 0px, -800px) rotateX(0deg) rotateY(80deg) scale(1); z-index: -3;"><img src="assets/img/13.jpg" style="width:100%;height:100%;object-fit: contain;"></div><!-- 2021-10-18 추가 조-->
                             <div class="swiper-slide" data-swiper-slide-index="9" role="group" aria-label="12 / 16" style="width: 372px; transition-duration: 0ms; transform: translate3d(0px, 0px, -600px) rotateX(0deg) rotateY(60deg) scale(1); z-index: -2;"><img src="assets/img/14.jpg" style="width:100%;height:100%;object-fit: contain;"></div><!-- 2021-10-18 추가 조-->
+                            <div class="swiper-slide" data-swiper-slide-index="9" role="group" aria-label="12 / 16" style="width: 372px; transition-duration: 0ms; transform: translate3d(0px, 0px, -600px) rotateX(0deg) rotateY(60deg) scale(1); z-index: -2;"><img src="assets/img/21.jpg" style="width:100%;height:100%;object-fit: contain;"></div><!-- 2021-10-18 추가 조-->
                     <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="15 / 16" style="width: 372px; transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1;"><img src="assets/img/09.jpg" style="width:100%;height:100%;object-fit: contain;"></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="16 / 16" style="width: 372px; transition-duration: 0ms; transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(-20deg) scale(1); z-index: 0;"><img src="assets/img/09.jpg" style="width:100%;height:100%;object-fit: contain;"></div></div>
                     <!-- Add Pagination --><br>
                     <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
@@ -147,16 +191,6 @@
                     document.getElementById("fullsizeG").style.visibility = "visible"
                     document.getElementById("fullsizeGBT").style.display = "block"
                 }
-                /* var swiper = new Swiper('.swiper-container', {
-                    slidesPerView: 1.5,
-                    spaceBetween:0,
-                    centeredSlides: true,
-                    loop: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                });*/
                 </script>
           </section>
           <!-- 인삿말 -->
@@ -343,10 +377,10 @@
           </script> -->
         </div>
     </body>
-    <div class="bottom_left"> 
+    <!-- <div class="bottom_left"> 
         <audio id="player" src="mus.mp3" autoplay loop></audio>
         <div>
             <i class="fa fa-music fa-2x" onclick="fn_audio()"></i>
         </div>
-    </div>
+    </div> -->
 </html>

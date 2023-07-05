@@ -113,7 +113,7 @@ function copy_to_clipboard(event) {
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     document.execCommand("Copy");
-    alert('감사합니다.');
+    alert('복사되었습니다. 감사합니다.');
 };
 
 function fn_audio() {
